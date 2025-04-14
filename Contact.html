@@ -1,0 +1,35 @@
+<!Doctype html>
+<head>
+<title>Formularios_Practica</title>
+</head>
+<body Align="center">
+
+    <h2> CONTACTO </h2>
+    <p> Rellena el formulario para ponerte en contacto conmigo. </p>
+    
+    <form action="practica_formularios.php" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>  
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+    </form>
+    <form action="practica_formularios.php" method="get">
+        <label for="Comisión">¿Que es lo que estas buscando?</label><br>
+        <select id="Comisión" name="comisión">
+        <option value="Ilustration">Ilustration</option>
+        <option value="Storyboard">Storyboard</option>
+        <option value="Character sheet/Design">Character Sheet/Design</option>
+        <option value="Concept art">Concept Art</option>
+        <option value="Short 2D/3D Animation">Short 2D/3D Animation</option>
+        <option value="Long 2D/3D Animation">Long 2D/3D Animation</option>
+        <option value="Rigged Character">Rigged Character</option>
+        <option value="Rendering">Rendering</option>
+        <option value="Other">Other</option>
+        </select><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p> Para colaboraciones o propuestas de trabajo, selecciona "Other" </p>
+
+</body>
+</html>
