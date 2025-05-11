@@ -1,0 +1,53 @@
+<!Doctype html>
+<head>
+<title>Formularios_Practica</title>
+<link rel="stylesheet" type="text/css" href="../Css/mystyle.css">
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../Artwork/index.html" class="nav-link">Artwork</a></li>
+        <li><a href="../contact/index.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="contact-container">
+    <div class="contact-form">
+        <h2>Contacto</h2>
+        <p>Rellena el formulario para ponerte en contacto conmigo.</p>
+        
+        <form action="practica_formularios.php" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"><br><br>  
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico"><br><br>
+        </form>
+
+        <form action="practica_formularios.php" method="get">
+            <label for="Comisión">¿Qué es lo que estás buscando?</label><br>
+            <select id="Comisión" name="comisión">
+                <option value="Ilustration">Ilustración</option>
+                <option value="Storyboard">Storyboard</option>
+                <option value="Character sheet/Design">Hoja de personaje/Diseño</option>
+                <option value="Concept art">Arte conceptual</option>
+                <option value="Short 2D/3D Animation">Animación corta 2D/3D</option>
+                <option value="Long 2D/3D Animation">Animación larga 2D/3D</option>
+                <option value="Rigged Character">Personaje riggeado</option>
+                <option value="Rendering">Renderizado</option>
+                <option value="Other">Otro</option>
+            </select><br><br>
+            <input type="submit" value="Enviar" class="button">
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h3>Colaboraciones</h3>
+        <p>Para colaboraciones o propuestas de trabajo, selecciona "Otro" en el formulario.</p>
+        <p>También podes escribirme directamente a: <a href="Levainfigueroa10@gmail.com"></a></p>
+    </div>
+</div>
+
+</body>
+</html>
