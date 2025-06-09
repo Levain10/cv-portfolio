@@ -1,0 +1,283 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente principal */
+    background: linear-gradient(180deg, #FFD700, #f48860); /* Fondo con degradado de dorado a naranja */
+    color: #000000; /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex; /* Usa Flexbox para alinear el contenido */
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+    text-align: center; /* Centra el texto */
+    margin-top: 60px; /* Espacio para evitar que el contenido quede detrás del menú */
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    color: #000000; /* Color negro */
+    text-shadow: 1px 1px #4e4e4e; /* Sombra para el texto */
+}
+
+/* Estilo del menú de navegación */
+nav {
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0; /* Alinea al borde superior */
+    left: 0; /* Alinea al borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    z-index: 1000; /* Asegura que el menú esté encima del contenido */
+    background-color: #e74210; /* Fondo rojo oscuro */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+/* Lista del menú */
+.menu {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+    display: flex; /* Alinea los elementos en fila */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+}
+
+/* Elementos del menú */
+.menu li {
+    margin: 0 15px; /* Espaciado entre los elementos */
+}
+
+/* Enlaces del menú */
+.menu li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1.2rem; /* Tamaño del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor */
+.menu li a:hover {
+    background-color: #ec8a08; /* Fondo naranja */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 0 15px 5px rgba(233, 40, 6, 0.6); /* Efecto de resplandor */
+}
+
+/* Sección "About Me" */
+.about-me {
+    display: flex; /* Usa Flexbox para alinear la imagen y el texto */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 20px; /* Espaciado entre columnas */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Imagen en la sección "About Me" */
+.about-image img {
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar la imagen */
+}
+
+/* Texto en la sección "About Me" */
+.about-text {
+    max-width: 600px; /* Ancho máximo del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: #333; /* Color del texto */
+}
+
+/* Botones de llamada a la acción */
+.cta-buttons {
+    margin-top: 20px; /* Espaciado superior */
+    display: flex; /* Alinea los botones en fila */
+    gap: 15px; /* Espaciado entre los botones */
+    justify-content: center; /* Centra los botones */
+}
+
+/* Estilo de los botones */
+.button {
+    background-color: #e74210; /* Fondo rojo oscuro */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño del texto */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor sobre los botones */
+.button:hover {
+    background-color: #357ab7; /* Fondo azul oscuro */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Animación de entrada */
+h1, h2, p, img, .button {
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    animation: fadeIn 1s ease forwards; /* Animación de entrada */
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Aparece */
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+/* Contenedor del formulario de contacto */
+.contact-container {
+    display: flex; /* Usa Flexbox para alinear los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    gap: 20px; /* Espaciado entre los elementos */
+    justify-content: center; /* Centra los elementos */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Formulario de contacto */
+.contact-form {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 300px; /* Ancho mínimo */
+    max-width: 500px; /* Ancho máximo */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 242, 219, 0.9); /* Fondo con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Campos del formulario */
+.contact-form input,
+.contact-form select {
+    width: 80%; /* Ancho del 80% del contenedor */
+    padding: 8px; /* Espaciado interno */
+    margin: 10px auto; /* Espaciado superior/inferior y centrado */
+    display: block; /* Cada campo en una nueva línea */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.9rem; /* Tamaño del texto */
+}
+
+/* Efecto al enfocar los campos */
+.contact-form input:focus,
+.contact-form select:focus {
+    border-color: #e74210; /* Borde rojo oscuro */
+    outline: none; /* Elimina el borde predeterminado */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Sombra azul */
+}
+
+/* Botón del formulario */
+.contact-form .button {
+    background-color: #e74210; /* Fondo rojo oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.contact-form .button:hover {
+    background-color: #c1350c; /* Fondo rojo más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Contenedor de información adicional */
+.contact-info {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 300px; /* Ancho mínimo */
+    max-width: 400px; /* Ancho máximo */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 242, 219, 0.9); /* Fondo con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Galería de imágenes */
+.gallery {
+    display: grid; /* Usa CSS Grid para organizar las imágenes */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas dinámicas */
+    gap: 40px; /* Espaciado entre las imágenes */
+    padding: 20px; /* Espaciado interno */
+    justify-items: center; /* Centra las imágenes horizontalmente */
+}
+
+/* Estilo de las imágenes */
+.gallery img {
+    width: 100%; /* Las imágenes ocupan el ancho de su celda */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el cursor sobre las imágenes */
+.gallery img:hover {
+    transform: scale(3.05); /* Aumenta el tamaño */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Estilo general para todas las imágenes */
+img {
+    border: 5px solid #e74210; /* Borde rojo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo del carrusel */
+.carousel {
+    display: flex; /* Usa Flexbox para el carrusel */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    gap: 10px; /* Espaciado entre imágenes */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+/* Imágenes del carrusel */
+.carousel img {
+    max-width: 400px; /* Ancho máximo de las imágenes */
+    max-height: 300px; /* Altura máxima de las imágenes */
+    width: auto; /* Ancho automático para mantener proporción */
+    height: auto; /* Altura automática para mantener proporción */
+    margin: 0 5px; /* Margen lateral */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Sombra suave */
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+    transition: opacity 0.5s, transform 0.5s; /* Transiciones suaves */
+    opacity: 1; /* Opacidad completa */
+    transform: translateX(0); /* Posición original */
+    cursor: none; /* Oculta el cursor sobre las imágenes */
+}
+
+/* Efectos de las imágenes del carrusel */
+.carousel img.fade {
+    opacity: 0; /* Invisible */
+}
+.carousel img.slide-left {
+    opacity: 0; /* Invisible */
+    transform: translateX(-100px); /* Desplazado a la izquierda */
+}
+.carousel img.slide-right {
+    opacity: 0; /* Invisible */
+    transform: translateX(100px); /* Desplazado a la derecha */
+}
+
+/* Estilo de los botones del carrusel */
+.carousel button {
+    font-size: 2rem; /* Tamaño grande para los botones */
+    background: #eee; /* Fondo gris claro */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Bordes redondeados */
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Alto fijo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Efecto al pasar el cursor sobre los botones del carrusel */
+.carousel button:hover {
+    background: #ccc; /* Fondo gris más oscuro */
+}
